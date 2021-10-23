@@ -23,7 +23,7 @@ public class AuthorizationServeConfig extends AuthorizationServerConfigurerAdapt
 	@Value("${security.oauth2.client.client-id}")
 	private String clientId;
 	
-	@Value("@{security.oauth2.client.client-secret}")
+	@Value("${security.oauth2.client.client-secret}")
 	private String clientSecret;
 	
 	@Autowired
