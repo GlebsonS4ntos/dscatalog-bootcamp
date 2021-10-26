@@ -13,8 +13,8 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
 import org.springframework.security.oauth2.provider.token.TokenEnhancerChain;
-import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
+import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 
 import com.bootcamp.dscatalog.components.JwtTokenEnchancer;
 
@@ -32,7 +32,7 @@ public class AuthorizationServeConfig extends AuthorizationServerConfigurerAdapt
 	private String clientSecret;
 	
 	@Autowired
-	private TokenStore tokenStore;
+	private JwtTokenStore tokenStore;
 	@Autowired
 	private BCryptPasswordEncoder passwordEncoder;
 	@Autowired

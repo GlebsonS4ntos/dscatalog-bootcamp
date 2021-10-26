@@ -28,6 +28,7 @@ public class UserInsertValidator implements ConstraintValidator<UserInsertValid,
 			context.buildConstraintViolationWithTemplate(e.getMessage()).addPropertyNode(e.getField())
 					.addConstraintViolation();
 			return false;
+
 		}
 		return true;
 	}
